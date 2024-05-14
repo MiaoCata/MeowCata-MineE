@@ -249,7 +249,9 @@ int main() {
                 flag_sum--;
 				minesum_correct++;
 				minesum_user++;
-			} else {
+			} else if (uiStatus[x][y] == 2) {
+            	continue;
+            } else {
 				//system("cls");
 				uiStatus[x][y] = 1; //current block is opened
 				for (int dx = -1; dx <= 1; dx++) {
